@@ -3,6 +3,8 @@ export const home = {
     home_container: {
         width: '100%',
         height: 'auto',
+        minHeight: '100vh',
+        marginBottom: '-50px',
         display: 'flex',
         justifyContent: 'center',
     },

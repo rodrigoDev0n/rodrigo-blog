@@ -2,12 +2,12 @@ import { card } from "../styles/card"
 import article from '../icons/article.png'
 import { useNavigate } from "react-router-dom"
 
-export const ArticlesCard = () => {
+export const ArticlesCard = ({title='Bienvenida al blog 👋', date='27 de Mayo 2023', route= '/post'}) => {
 
     const navigate = useNavigate()
 
     const handleToWelcome = () => {
-        navigate('/post')
+        navigate(route)
     }
 
     return (
@@ -23,10 +23,10 @@ export const ArticlesCard = () => {
             </div>
             <div style={card.card_article_data_container}>
                 <h2 style={card.card_title}>
-                    Bienvenida al blog 👋
+                    {title}
                 </h2>
                 <p style={card.card_date}>
-                    27 Mayo 2023
+                    {date}
                 </p>
             </div>
         </div>

@@ -10,7 +10,6 @@ export const footer = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: 'auto'
     },
     footer_img: {
         height: '40px'

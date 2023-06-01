@@ -1,13 +1,11 @@
 import { footer } from "../styles/footer"
 import github from '../icons/github.png'
 
-export const Footer = ({position}) => {
+export const Footer = () => {
   return (
     <footer style={
         {
-            ...footer.footer_container,
-            position: position ? 'absolute' : '',
-            bottom: '0px'
+        ...footer.footer_container
         }
     }>
         <div style={footer.footer_info_container}>
