@@ -19,7 +19,6 @@ export const ArticlesCard = ({title='Bienvenida al blog 👋', date='27 de Mayo 
             <div 
                 style={card.card_article_container}
             >
-                <img className="custom-icon-animation" src={article} alt="article" />
             </div>
             <div style={card.card_article_data_container}>
                 <h2 style={card.card_title}>

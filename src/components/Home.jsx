@@ -17,6 +17,7 @@ export const Home = () => {
                 {
                   articles.map(({title, date, route}) => (
                     <ArticlesCard
+                      key={title}
                       title={title}
                       date={date}
                       route={route}

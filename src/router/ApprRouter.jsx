@@ -15,7 +15,7 @@ export const ApprRouter = () => {
         } />
         {
           articles.map(({route, file}) => (
-            <Route path={route} element={
+            <Route key={route} path={route} element={
               <Post article={file} />
             } />
           ))

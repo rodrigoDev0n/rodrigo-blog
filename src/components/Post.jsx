@@ -3,11 +3,29 @@ import { Nav } from "./Nav"
 import { useEffect, useState } from "react"
 import { Footer } from "./Footer"
 import { CodeRender } from "./CodeRender"
+import { Emoji } from "./Emojis"
+
 export const Post = ({article='welcome.md'}) => {
  
   const [post, setpost] = useState('')
+  const [component, setcomponent] = useState([])
+
+  const getRandomEmoji = () => {
+    let emojis = []
+
+    for(let i = 0; i < 100; i++){
+      emojis.push('🤓')
+      setcomponent(
+        [
+          emojis
+        ]
+      )
+    }
+  }
 
   useEffect(() => {
+    getRandomEmoji()
+    console.log(component)
     import(`../post/${article}`)
         .then(res => res.default)
         .then(res => {
@@ -16,7 +34,7 @@ export const Post = ({article='welcome.md'}) => {
                 .then(res => setpost(res))
         })
   }, [])
-  
+
   return (
     <>
         <Nav />
@@ -27,7 +45,13 @@ export const Post = ({article='welcome.md'}) => {
             justifyContent: 'center',
             marginTop: '50px'
         }}>
-            <article className="custom-article">
+            <div style={{
+              width: '100%',
+              height: 'auto',
+              position: 'absolute'
+            }}>
+            </div>
+            <article className="custom-article box-shadow">
                 <Markdown options={{
                     overrides: {
                         Code: {
